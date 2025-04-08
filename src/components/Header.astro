@@ -1,0 +1,81 @@
+---
+const navItems = [
+  { name: 'Features', href: '#features' },
+  { name: 'How it works', href: '#workflow' },
+  { name: 'Testimonials', href: '#testimonials' },
+  { name: 'Pricing', href: '#pricing' },
+  { name: 'Documentation', href: '#' },
+];
+---
+
+<header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <div class="flex items-center">
+        <a href="/" class="flex items-center">
+          <span class="h-8 w-8 bg-black rounded-lg flex items-center justify-center mr-3">
+            <span class="text-white font-bold text-xl">C</span>
+          </span>
+          <span class="text-xl font-bold">ContentForge</span>
+        </a>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        {navItems.map(item => (
+          <a href={item.href} class="text-sm font-medium text-gray-600 hover:text-black transition-colors">
+            {item.name}
+          </a>
+        ))}
+      </nav>
+      
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="#" class="text-sm font-medium text-gray-600 hover:text-black transition-colors">
+          Log in
+        </a>
+        <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition-colors">
+          Start free trial
+        </a>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <button type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-black" aria-expanded="false" id="mobile-menu-button">
+        <span class="sr-only">Open main menu</span>
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 border-t border-gray-100">
+        {navItems.map(item => (
+          <a href={item.href} class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50 rounded-md">
+            {item.name}
+          </a>
+        ))}
+        <div class="mt-4 flex flex-col space-y-3">
+          <a href="#" class="px-3 py-2 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50 rounded-md">
+            Log in
+          </a>
+          <a href="#" class="px-3 py-2 text-base font-medium text-white bg-black rounded-md hover:bg-gray-800 text-center">
+            Start free trial
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

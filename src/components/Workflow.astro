@@ -1,0 +1,156 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Create your project",
+    description: "Set up a new project in ContentForge and get your API keys for authentication and content delivery.",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-08%20at%2020.30.49-JeoKWzD9MXGBdNKsnDKjgiqC0xsQsM.png",
+  },
+  {
+    number: "02",
+    title: "Define content schemas",
+    description:
+      "Create custom content types with fields, validations, and relationships that match your specific needs.",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-08%20at%2020.32.34-V2ES63oARTQ7JYpTjkoSoLmz5M1rEi.png",
+  },
+  {
+    number: "03",
+    title: "Create and manage content",
+    description:
+      "Use our intuitive editor to create, edit, and organize your content with fields based on your schema.",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-08%20at%2020.32.42-ojJucS16EGVLGA3TrfjRW0nR7Irez0.png",
+  },
+  {
+    number: "04",
+    title: "Deliver to any platform",
+    description: "Access your content via API and monitor usage analytics to optimize your content delivery.",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-04-08%20at%2020.31.08-nb7kynjRxuZIHbHPDaFfsJc11ls4no.png",
+  },
+]
+---
+
+<section id="workflow" class="py-20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">How ContentForge works</h2>
+      <p class="text-xl text-gray-600">
+        A simple workflow that empowers your team to create and deliver content efficiently.
+      </p>
+    </div>
+    
+    <div class="space-y-24">
+      {steps.map((step, index) => (
+        <div class={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-8 lg:gap-16`}>
+          <div class="w-full lg:w-1/2">
+            <div class="relative">
+              <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+                <img src={step.image || "/placeholder.svg"} alt={step.title} class="w-full h-full object-cover" />
+              </div>
+              <div class="absolute -top-4 -left-4 w-12 h-12 bg-black border border-white text-white flex items-center justify-center rounded-lg text-xl font-bold">
+                {step.number}
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">{step.title}</h3>
+            <p class="text-lg text-gray-600 mb-6">{step.description}</p>
+            <ul class="space-y-3">
+              {index === 0 && (
+                <>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Intuitive schema builder with drag-and-drop interface</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Custom field types for any content need</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Define relationships between content types</span>
+                  </li>
+                </>
+              )}
+              {index === 1 && (
+                <>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Rich text editor with customizable formatting options</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Real-time collaboration with presence indicators</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Content versioning and change tracking</span>
+                  </li>
+                </>
+              )}
+              {index === 2 && (
+                <>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Preview content across different devices and channels</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Scheduled publishing with approval workflows</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Content validation before publishing</span>
+                  </li>
+                </>
+              )}
+              {index === 3 && (
+                <>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Built in Query functions for flexible content queries</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Webhooks for real-time content updates</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>SDKs for popular frameworks and languages</span>
+                  </li>
+                </>
+              )}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
