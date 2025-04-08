@@ -1,7 +1,7 @@
-
 <img width="1915" alt="Screenshot 2025-04-09 at 00 07 46" src="https://github.com/user-attachments/assets/34bf1a09-654a-4ae0-9542-dad733d6c8ff" />
 
 # ContentForge
+
 > Inspired Landing Page
 A clean, modern landing page built with Astro, inspired by the ContentForge headless CMS website.
 
@@ -39,8 +39,7 @@ This is a simple landing page implementation that recreates the design and layou
 🧞 Commands
 All commands are run from the root of the project, from a terminal:
 
-## Command	Action<img width="1915" alt="Screenshot 2025-04-09 at 00 07 28" src="https://github.com/user-attachments/assets/301011c6-a435-4b61-acac-c182fbfd11a5" />
-
+## Command	Action
 ```text
 | Command               | Description                               |
 |-----------------------|-------------------------------------------|
