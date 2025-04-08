@@ -1,47 +1,81 @@
-# Astro Starter Kit: Minimal
+ContentForge-Inspired Landing Page
+A clean, modern landing page built with Astro, inspired by the ContentForge headless CMS website.
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+📝 Project Description
+This is a simple landing page implementation that recreates the design and layout of the ContentForge website. The page features a clean, professional appearance with a hero section, feature highlights, and call-to-action elements.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
+📁 Project Structure
 ```text
 /
 ├── public/
+│   ├── images/
+│   │   ├── dashboard.png
+│   │   └── content-editor.png
 ├── src/
+│   ├── components/
+│   │   ├── CTA.astro
+│   │   ├── Features.astro
+│   │   ├── Footer.astro
+│   │   ├── Hero.astro
+│   │   └── Footer.astro
+│   │   └── Pricing.astro
+│   │   └── Script.tsx
+│   │   └── Testimonials.astro
+│   │   └── Workflow.astro
+│   ├── layouts/
+│   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
-└── package.json
+│   └── styles/
+│       └── global.css
+├── package.json
+└── astro.config.mjs
+└── tailwind.config.mjs
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
+🧞 Commands
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## Command	Action
+```text
+| Command               | Description                               |
+|-----------------------|-------------------------------------------|
+| `pnpm install`        | Installs dependencies                     |
+| `pnpm dev`            | Starts local dev server at `localhost:4321` |
+| `pnpm build`          | Builds your production site to `./dist/`  |
+| `pnpm astro -- --help`| Get help using the Astro CLI              |
+```
 
-## 👀 Want to learn more?
+🎨 Implementation Details
+The landing page includes the following sections:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🚀 Getting Started
+
+# Create a new project with the minimal Astro template
+```bash
+git clone git@github.com:persona25/simplecms-lp.git
+```
+
+# Navigate to the project directory
+```bash
+cd simplecms-lp
+```
+# Install dependencies
+```bash
+pnpm install
+```
+
+# Add TailwindCSS (optional)
+```bash
+pnpm astro add tailwind
+```
+
+# Start the development server
+```bash
+pnpm dev
+```
+## 📝 Implementation Notes
+
+The design uses a dark theme for the dashboard preview section
+The page is fully responsive for mobile and desktop viewing
+Minimal animations can be added for improved user experience
+The installation command section uses a monospace font with copy button functionality
